@@ -7,7 +7,8 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="stylesheet" href="./libs/bootstrap.min.css">
 	<link rel="stylesheet" href="./style/style.css">
-	<title>freelance - шаурма</title>
+	<link rel="shortcut icon" href="img/freelance.png">
+	<title>Frreelance - Exchange</title>
 </head>
 <body>
 
@@ -15,7 +16,7 @@
 <main class="container py-5 text-center">
 	<div id="block-choice">
 		<img class="d-block mx-auto mb-4" src="./img/logo.png" alt="" width="72" height="72">
-		<h1>FreeShavuha</h1>
+		<h1>Freelance-exchange</h1>
 		<p class="lead text-muted">Добро пожаловать на нашу фриланс биржу</p>
 		<p class="lead text-muted">Если вы заказчик то вы можете заказать проект</p>
 		<p class="lead text-muted">Если вы фрилансер то вы всегда найдете у нас проект по силам</p>
@@ -30,28 +31,27 @@
 
 	<div id="block-customer">
 		<img class="d-block mx-auto mb-4" src="./img/logo.png" alt="" width="72" height="72">
-		<h1>FreeShavuha</h1>
+		<h1>Frreelance - Exchange</h1>
 		<div class="col">
 			<h4 class="mb-3">Оставьте заявку</h4>
 			<form id="form-customer">
 
 				<div class="mb-3">
 					<label for="title">Заголовок (краткое описание задачи)</label>
-					<input type="text" class="form-control" id="title" name="title" required value="заголовок">
+					<input type="text" class="form-control" id="title" name="title" required placeholder="Введите заголовок">
 				</div>
 				<div class="row">
 					<div class="col-md-4 mb-3">
 						<label for="firstName">Ваше имя</label>
-						<input type="text" class="form-control" id="firstName" name="firstName" required value="ваше имя">
+						<input type="text" class="form-control" id="firstName" name="firstName" required placeholder="Введите ваше имя">
 					</div>
 					<div class="col-md-4 mb-3">
 						<label for="email">Email</label>
-						<input type="email" class="form-control" id="email" name="email" placeholder="you@mail.com" required
-									 value="email@email">
+						<input type="email" class="form-control" id="email" name="email" placeholder="your@mail.com" required>
 					</div>
 					<div class="col-md-4 mb-3">
 						<label for="phone">Номер телефона <span class="text-muted">(optional)</span></label>
-						<input type="text" class="form-control" id="phone" name="phone" value="911">
+						<input type="text" class="form-control" id="phone" name="phone" placeholder="X-XXX-XXX-XXXX">
 					</div>
 				</div>
 
@@ -59,8 +59,8 @@
 				<div class="mb-3">
 					<label for="description">Описание</label>
 					<textarea type="text" class="form-control" id="description" name="description"
-										placeholder="Поднобно опишите задачу" rows="4"
-										required>Lorem ipsum dolor sit amet, consectetur.</textarea>
+										placeholder="Подробно опишите задачу" rows="4"
+										required></textarea>
 				</div>
 
 				<div class="row">
@@ -68,7 +68,7 @@
 
 						<div class="mb-3">
 							<label for="amount">Количество</label>
-							<input type="number" class="form-control" id="amount" name="amount" required value="10">
+							<input type="number" class="form-control" id="amount" name="amount" step="any" required min="0.1" max="99999">
 						</div>
 						<div class="d-flex justify-content-center">
 							<label class="currency">
@@ -89,8 +89,7 @@
 						<div class="mb-3">
 							<label for="deadline">Срок выполнения до:</label>
 
-							<input type="date" id="deadline" class="form-control" name="deadline" max="2020-12-31" required
-										 value="2020-01-01">
+							<input type="date" id="deadline" class="form-control" name="deadline" max="2020-12-31" required>
 						</div>
 						<button class="btn btn-primary btn-lg btn-block" type="submit">Отправить заявку</button>
 					</div>
@@ -106,15 +105,15 @@
 
 	<div id="block-freelancer">
 		<img class="d-block mx-auto mb-4" src="./img/logo.png" alt="" width="72" height="72">
-		<h1>FreeShavuha</h1>
+		<h1>Freelance-exchange</h1>
 		<div class="table-responsive">
 			<table class="table table-bordered table-hover table-sm">
-				<thead class="thead-dark">
+				<thead class="thead-dark" id="head-table">
 				<tr>
 					<th>#</th>
-					<th>Основная задача</th>
-					<th>Валюта</th>
-					<th>Дедлайн</th>
+					<th class="head-sort" id="taskSort">Основная задача</th>
+					<th class="head-sort" id="currencySort">Валюта 	</th>
+					<th class="head-sort" id="deadlineSort">Дедлайн </th>
 				</tr>
 				</thead>
 				<tbody id="orders">

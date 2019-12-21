@@ -8,16 +8,16 @@ main {
     position: relative;
     height: 48px;
     width: 48px;
-}
-
+}  
 .currency__radio {
     position: absolute;
     opacity: 0;
 }
 
 .currency__radio:checked + .img__radio {
-    filter: none;
-    border-color: tomato;
+    filter: drop-shadow(1px 2px 4px #007bff);
+    width: 50px;
+    height: 50px;
 }
 
 .img__radio {
@@ -36,34 +36,34 @@ main {
 }
 
 .img__radio_bucks {
-    background-image: url("../img/bucks.png");
+    background-image: url("../img/dollar.png");
 }
 
 .img__radio_shawarma {
-    background-image: url("../img/shawarma.png");
+    background-image: url("../img/bitcoin.png");
 }
 
 .img__radio_doshirak {
-    background-image: url("../img/doshirak.png");
+    background-image: url("../img/euro.png");
 }
 
 /*table*/
 
 
-.shawarma {
-    background: url("../img/shawarma.png") center/contain no-repeat;
+.bucks {
+    background: url("../img/dollar.png") center/contain no-repeat;
+    height: 40px;
+    width: 60px;
+}
+
+.shawarma{
+    background: url("../img/bitcoin.png") center/contain no-repeat;
     height: 40px;
     width: 60px;
 }
 
 .doshirak {
-    background: url("../img/doshirak.png") center/contain no-repeat;
-    height: 40px;
-    width: 60px;
-}
-
-.bucks {
-    background: url("../img/bucks.png") center/contain no-repeat;
+    background: url("../img/euro.png") center/contain no-repeat;
     height: 40px;
     width: 60px;
 }
@@ -118,4 +118,18 @@ main {
     top: 3rem;
     right: 1rem;
     padding: 0.5rem 3rem;
+    background: #007bff;
+    border-color: #007bff;;
+}
+.head-sort{
+    cursor: pointer;
+}
+.head-sort:hover{
+    background: #44484d !important;
+    border-color: #44484d !important;
+}
+.arrowSort{
+    display: none;
+    width: 10px;
+    height: 10px;
 }
